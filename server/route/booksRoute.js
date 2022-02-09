@@ -1,12 +1,14 @@
 const express = require('express');
 const router  = express.Router();
+const booksService = require('../service/booksService.js')
 
 router.post('/books', async function (req, res){
-
+    
 });
 
 router.get('/books', async function (req, res){
-
+    const books = await booksService.getBooks();
+    res.json(books);
 });
 
 router.get('/books/:id', async function (req, res){
