@@ -1,5 +1,5 @@
 const booksData = require('../data/booksData.js');
 
-exports.getBooks = function () {
+exports.getBooks = async function () {
     return booksData.getBooks();
 };

@@ -7,8 +7,18 @@ router.post('/books', async function (req, res){
 });
 
 router.get('/books', async function (req, res){
-    const books = await booksService.getBooks();
-    res.json(books);
+    
+    try {
+
+        const books = await booksService.getBooks();
+        //res.json(books);
+
+        console.log(books)
+
+    } catch (error) {
+        console.log(error)
+    }
+
 });
 
 router.get('/books/:id', async function (req, res){
