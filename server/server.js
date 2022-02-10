@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
+const port = 3001;
 
-app.use('/', require('./route/booksRoute'));
-
-app.listen(3000);
+app.listen(port, function () {
+    console.log('Server is running')
+});
