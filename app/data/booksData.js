@@ -1,11 +1,14 @@
-const database = require('../../database/db.js')
+const mysql = require('../../database/db.js')
 
 exports.getBooks = async function () {
 
-    return await database.query('select * from books')
+    const conn = await connect()
+    return await conn.query('SELECT * FROM BOOKS')
 }
 
 exports.getOneBook = async function (id) {
 
-    return await database.query('select * from books where id = ${id}')
+    return await mysql.promisse.query('select * from books where id = ${id}')
 }
+
+module.exports = connect
