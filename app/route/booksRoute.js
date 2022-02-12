@@ -4,7 +4,7 @@ const booksService = require('../service/booksService.js')
 
 router.get('/', async function (req, res) {
     try {
-        //res.send('teste')
+        res.send('teste')
 
     } catch (error) {
         console.log(error)
@@ -15,11 +15,10 @@ router.get('/', async function (req, res) {
 router.get('/books', async function (req, res){
     
     try {
-
+    
         const books = await booksService.getBooks()
         res.json(books);
 
-        console.log(books)
 
     } catch (error) {
 
