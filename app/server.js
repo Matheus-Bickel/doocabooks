@@ -1,7 +1,15 @@
 const express = require('express');
 const app = express();
-const port = 3001;
+const port = 3000;
+
+app.use('/books', require('./route/booksRoute'))
 
 app.listen(port, function () {
-    console.log('Server is running')
+    try {
+        
+        console.log('Server is running')
+    } catch (error) {
+
+        console.log(error)
+    }
 });
