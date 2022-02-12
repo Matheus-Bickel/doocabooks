@@ -1,6 +1,7 @@
 const express = require('express');
 const router  = express.Router();
 const booksService = require('../service/booksService.js')
+const books = require('../models/books.js')
 
 router.get('/', async function (req, res) {
     try {
@@ -28,7 +29,7 @@ router.get('/books', async function (req, res){
 });
 
 router.get('/books/:id', async function (req, res){
-
+    return books;
 });
 
 router.post('/books', async function (req, res){
