@@ -18,7 +18,7 @@ router.get('/books', async function (req, res){
     try {
     
         const books = await booksService.getBooks()
-        res.json(books);
+        res.json(books)
 
 
     } catch (error) {
@@ -29,7 +29,7 @@ router.get('/books', async function (req, res){
 });
 
 router.get('/books/:id', async function (req, res){
-    return books;
+    return json(books)
 });
 
 router.post('/books', async function (req, res){
