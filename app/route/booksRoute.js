@@ -4,11 +4,11 @@ const BooksService = require('../service/booksService.js')
 const books = require('../models/books.js')
 const booksController = require('../controllers/booksController.js')
 
-const booksController = new BooksService()
 
 router.get('/books', (req, res) => {
     
-    booksController.BooksService(req, res)
+    booksController.BooksService(req, res) 
+        
 })
     
 
