@@ -1,48 +1,33 @@
 const express = require('express');
 const router  = express.Router();
-const booksService = require('../service/booksService.js')
+const BooksService = require('../service/booksService.js')
 const books = require('../models/books.js')
+const booksController = require('../controllers/booksController.js')
 
-router.get('/', async function (req, res) {
-    try {
-        res.send('teste')
+const booksController = new BooksService()
 
-    } catch (error) {
-        console.log(error)
-    }
-
-});
-
-router.get('/books', async function (req, res){
+router.get('/books', (req, res) => {
     
-    try {
+    booksController.BooksService(req, res)
+})
     
-        const books = await booksService.getBooks()
-        res.json(books)
 
-
-    } catch (error) {
-
-        console.log(error)
-    }
-
-});
 
 router.get('/books/:id', async function (req, res){
     return json(books)
-});
+})
 
 router.post('/books', async function (req, res){
     
-});
+})
 
 router.put('/books/:id', async function (req, res){
 
-});
+})
 
 router.delete('/books/:id', async function (req, res){
 
-});
+})
 
 
 module.exports = router
