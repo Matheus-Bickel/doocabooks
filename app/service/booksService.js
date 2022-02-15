@@ -1,9 +1,10 @@
 const booksData = require('../data/booksData.js')
 
-exports.getBooks = async function () {
-    return await booksData.getBooks()
-};
+class BooksService {
 
-exports.getOneBook = async function () {
-    return await booksData.getOneBook()
+    
+    getOneBook = async function () {
+        return await booksData.getOneBook()
+    }
+
 }
