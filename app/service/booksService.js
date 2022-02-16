@@ -3,13 +3,15 @@ const booksData = require('../data/booksData.js')
 class BooksService {
 
     constructor () {
-        this.booksService = new BooksService()
+
     }
 
     booksService = async function (req, res) {
         return await booksData.getBooks()
+        
+        getBooks.json(response)
     }
 
 }
 
-module.exports = BooksService
+module.exports = new BooksService
