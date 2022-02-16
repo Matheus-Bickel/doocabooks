@@ -1,15 +1,17 @@
 const req = require('express/lib/request')
-const BooksService = require('../service/booksService.js')
-const BooksData = require('../data/booksData.js')
+const res = require('express/lib/response')
+const booksService = require('../service/booksService.js')
+const booksData = require('../data/booksData.js')
+const { get } = require('express/lib/response')
 
 class booksController {
 
-    constructor() {
-        this.booksService = new BooksService()
+    booksService = async (req, res) => {
+
+        return await booksService.getBooks
+
+        getBooks.jssn(response)
     }
-
-    async getBooks (req, res) {
-        return await booksData.getBooks()
-    };
-
 }
+
+module.exports = new booksController()
