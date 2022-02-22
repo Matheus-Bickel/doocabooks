@@ -4,7 +4,7 @@ const booksService = require('../service/booksService.js')
 const booksData = require('../data/booksData.js')
 const { get } = require('express/lib/response')
 
-class booksController {
+class BooksController {
 
     booksService = async (req, res) => {
 
@@ -14,4 +14,4 @@ class booksController {
     }
 }
 
-module.exports = new booksController()
+module.exports = new BooksController()

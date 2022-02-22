@@ -14,4 +14,4 @@ class BooksService {
 
 }
 
-module.exports = new BooksService
+module.exports = new BooksService()
